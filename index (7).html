@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainab &amp; Faisal - Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #E75480;
+            --secondary-color: #FFB6C1;
+            --background-color: #FFF8F3;
+            --text-color: #2C3E2F;
+            --accent-color: #D4A574;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #FFE8E8 0%, #FFD4D4 25%, #FFC9C9 50%, #FFE0D6 75%, #FFF0E6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(231, 84, 128, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(212, 165, 116, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .invitation-card {
+            background: var(--background-color);
+            max-width: 500px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 10px 30px rgba(231, 84, 128, 0.1);
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: fadeInScale 1s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Floral decorations */
+        .floral-decoration {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .floral-top-right {
+            top: -10px;
+            right: -10px;
+            width: 180px;
+            height: 180px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="petal1" cx="50%" cy="50%"><stop offset="0%" style="stop-color:%23E75480;stop-opacity:0.9" /><stop offset="100%" style="stop-color:%23FFB6C1;stop-opacity:0.6" /></radialGradient><radialGradient id="petal2" cx="50%" cy="50%"><stop offset="0%" style="stop-color:%23FF8FA3;stop-opacity:0.85" /><stop offset="100%" style="stop-color:%23FFD4D4;stop-opacity:0.5" /></radialGradient></defs><ellipse cx="150" cy="70" rx="30" ry="45" fill="url(%23petal1)" transform="rotate(-30 150 70)" /><ellipse cx="170" cy="95" rx="28" ry="42" fill="url(%23petal2)" transform="rotate(20 170 95)" /><ellipse cx="140" cy="100" rx="25" ry="38" fill="url(%23petal1)" transform="rotate(-60 140 100)" /><ellipse cx="165" cy="50" rx="22" ry="35" fill="url(%23petal2)" transform="rotate(45 165 50)" /><circle cx="155" cy="75" r="15" fill="%23D4A574" opacity="0.7" /><circle cx="150" cy="80" r="8" fill="%23E75480" opacity="0.5" /></svg>');
+        }
+
+        .floral-bottom-left {
+            bottom: -15px;
+            left: -15px;
+            width: 150px;
+            height: 150px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="p1" cx="50%" cy="50%"><stop offset="0%" style="stop-color:%23FFB6C1;stop-opacity:0.9" /><stop offset="100%" style="stop-color:%23E75480;stop-opacity:0.5" /></radialGradient></defs><ellipse cx="50" cy="150" rx="28" ry="40" fill="url(%23p1)" transform="rotate(30 50 150)" /><ellipse cx="75" cy="160" rx="25" ry="38" fill="%23FF8FA3" opacity="0.7" transform="rotate(-20 75 160)" /><ellipse cx="35" cy="170" rx="22" ry="35" fill="%23FFD4D4" opacity="0.6" transform="rotate(60 35 170)" /><circle cx="55" cy="160" r="12" fill="%23D4A574" opacity="0.6" /></svg>');
+        }
+
+        .floral-bottom-right {
+            bottom: 10px;
+            right: 10px;
+            width: 130px;
+            height: 130px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><ellipse cx="160" cy="165" rx="25" ry="35" fill="%23E75480" opacity="0.7" transform="rotate(-45 160 165)" /><ellipse cx="140" cy="175" rx="22" ry="32" fill="%23FFB6C1" opacity="0.6" transform="rotate(25 140 175)" /><ellipse cx="170" cy="180" rx="20" ry="30" fill="%23FF8FA3" opacity="0.65" transform="rotate(-15 170 180)" /><circle cx="155" cy="172" r="10" fill="%23D4A574" opacity="0.5" /></svg>');
+        }
+
+        .invitation-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .top-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            letter-spacing: 3px;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            font-weight: 600;
+            opacity: 0;
+            animation: slideDown 0.8s ease-out 0.5s forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .names {
+            margin: 35px 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.7s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 52px;
+            color: var(--primary-color);
+            line-height: 1.3;
+            margin: 5px 0;
+        }
+
+        .ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 40px;
+            color: var(--accent-color);
+            margin: 10px 0;
+            display: block;
+        }
+		
+		.invitee {
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+            color: var(--accent-color);
+            margin: 10px 0;
+            display: block;
+        }
+		
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            color: var(--text-color);
+            margin: 30px 0;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.9s forwards;
+        }
+		
+
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+            margin: 25px auto;
+            opacity: 0;
+            animation: expandWidth 0.8s ease-out 1s forwards;
+        }
+
+        @keyframes expandWidth {
+            from {
+                opacity: 0;
+                width: 0;
+            }
+            to {
+                opacity: 1;
+                width: 60px;
+            }
+        }
+
+        .details {
+            margin: 30px 0;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 1.1s forwards;
+        }
+
+        .detail-item {
+            margin: 20px 0;
+        }
+
+        .date {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--text-color);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .time, .venue {
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            color: var(--text-color);
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        .venue {
+            margin-top: 10px;
+        }
+
+        .reception-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--text-color);
+            margin: 30px 0 35px;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 1.3s forwards;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 84, 128, 0.3);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInScale 0.8s ease-out 1.5s forwards;
+            cursor: pointer;
+            border: none;
+        }
+
+        .rsvp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 84, 128, 0.4);
+            background: linear-gradient(135deg, #D4457A, #FF9FB1);
+        }
+
+        .rsvp-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .invitation-card {
+                padding: 50px 30px;
+            }
+
+            .name {
+                font-size: 42px;
+            }
+
+            .ampersand {
+                font-size: 32px;
+            }
+
+            .date {
+                font-size: 20px;
+            }
+
+            .top-text, .subtitle {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .floral-top-right {
+                width: 140px;
+                height: 140px;
+            }
+
+            .floral-bottom-left,
+            .floral-bottom-right {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .invitation-card {
+                padding: 40px 25px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+
+            .rsvp-button {
+                padding: 12px 30px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <!-- Floral Decorations -->
+        <div class="floral-decoration floral-top-right"></div>
+        <div class="floral-decoration floral-bottom-left"></div>
+        <div class="floral-decoration floral-bottom-right"></div>
+
+        <!-- Invitation Content -->
+        <div class="invitation-content">
+            <div class="top-text">Mrs &amp; Mr Haji. Syed Niyamathullah<br>Arafa Milk Khova Dairy, Bengaluru</div>
+			
+			<span class="invitee">Invite you to the Nikah &amp;  Valima Reception of their daughter.</span>
+
+            <div class="names">
+                <div class="name">Zainab</div>
+				<div class="time">Daughter of Haji. Syed Niyamathullah Saheb<br>Arafa Milk Khova Dairy, Bengaluru</div>
+			
+                <span class="ampersand">&amp;</span>
+                <div class="name">Mohammed Faisal</div>
+				
+                <div class="time">Son of Janab Barkath Ali Saheb<br>Furniture Merchant, Bengaluru</div>
+          
+            </div>
+
+
+			
+            <div class="divider"></div>
+			
+			<span class="ampersand">Inshallah</span>
+
+            <div class="details">
+                <div class="detail-item">
+                    <div class="time">On Saturday,</div> <div class="date">27 DECEMBER 2025</div>
+                </div>
+                <div class="detail-item">
+                    <div class="date">Nikah</div>
+					<span class="time">After Namaz-e-Zohar at Madina Masjid,<br>New Bamboo Bazar, Shivajinagar, Bengaluru</span>
+					
+                </div>
+                <div class="detail-item">
+                    <div class="date">Valima Reception</div>
+					<span class="time">Sameday Lunch 2 pm onwards at<br>Maryam Convention Hall,<br>Cock Burn Rd, Sulthangunta, <br>Shivaji Nagar, Bengaluru</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+        </div>
+    </div>
+</body>
+</html>
