@@ -50,11 +50,11 @@
 
         .invitation-card {
             background: var(--background-color);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 10px 30px rgba(231, 84, 128, 0.1);
-            padding: 60px 40px;
+            padding: 20px 40px 50px !important;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -115,6 +115,8 @@
             text-align: center;
             position: relative;
             z-index: 2;
+			margin-top: 100px; /* push text down so it doesn't overlap the PNG */
+			padding-top: 0 !important;
         }
 
         .top-text {
@@ -303,8 +305,8 @@
             }
 
             .top-text, .subtitle {
-                font-size: 10px;
-                letter-spacing: 2px;
+                font-size: 14px;
+                letter-spacing: 1px;
             }
 
             .floral-top-right {
@@ -333,24 +335,46 @@
                 font-size: 12px;
             }
         }
+
+
+.bis-container {
+    position: absolute;
+    top: 5px; /* adjust to place perfectly */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.bis-img {
+    height: 200px; /* adjust */
+    width: auto;
+    object-fit: contain;
+}
+
+
     </style>
 </head>
 <body>
+			<div class="bis-container">
+			<img src="bismi.png" alt="Bismillah" class="bis-img">
+			</div>
     <div class="invitation-card">
         <!-- Floral Decorations -->
         <div class="floral-decoration floral-top-right"></div>
         <div class="floral-decoration floral-bottom-left"></div>
         <div class="floral-decoration floral-bottom-right"></div>
-
+					
         <!-- Invitation Content -->
+		
         <div class="invitation-content">
-            <div class="top-text">Mrs &amp; Mr Haji. Syed Niyamathullah<br>Arafa Milk Khova Dairy, Bengaluru</div>
+
+            <div class="top-text"><strong>Mrs &amp; Mr Syed Niyamathullah</strong></div>
 			
-			<span class="invitee">Invite you to the Nikah &amp;  Valima Reception of their daughter.</span>
+			<span class="invitee">Cordially invite you to the Nikah & Valima<br>of their beloved daughter.</span>
 
             <div class="names">
                 <div class="name">Zainab</div>
-				<div class="time">Daughter of Haji. Syed Niyamathullah Saheb<br>Arafa Milk Khova Dairy, Bengaluru</div>
+				<div class="time">Daughter of Syed Niyamathullah Saheb<br>Arafa Milk Khova Dairy, Bengaluru</div>
 			
                 <span class="ampersand">&amp;</span>
                 <div class="name">Mohammed Faisal</div>
@@ -363,15 +387,14 @@
 			
             <div class="divider"></div>
 			
-			<span class="ampersand">Inshallah</span>
-
             <div class="details">
-                <div class="detail-item">
-                    <div class="time">On Saturday,</div> <div class="date">27 DECEMBER 2025</div>
-                </div>
+					<span class="ampersand">Inshallah</span>
+                    <div class="time">On Saturday,</div>
+					<div class="date">27 DECEMBER 2025</div>
+    
                 <div class="detail-item">
                     <div class="date">Nikah</div>
-					<span class="time">After Namaz-e-Zohar at Madina Masjid,<br>New Bamboo Bazar, Shivajinagar, Bengaluru</span>
+					<span class="time">After Namaz-e-Zohar sharp 12:15 PM at Madina Masjid,<br>New Bamboo Bazar, Shivajinagar, Bengaluru</span>
 					
                 </div>
                 <div class="detail-item">
@@ -379,8 +402,10 @@
 					<span class="time">Sameday Lunch 2 pm onwards at<br>Maryam Convention Hall,<br>Cock Burn Rd, Sulthangunta, <br>Shivaji Nagar, Bengaluru</span>
                 </div>
             </div>
+			
 
             <div class="divider"></div>
+			<small class="top-text">Best compliments from relatives & friends</small>
 
         </div>
     </div>
